@@ -1,0 +1,14 @@
+diff --git a/third-party/cmake/BuildMsgpack.cmake b/third-party/cmake/BuildMsgpack.cmake
+index 76739593921..1343948d36d 100644
+
+--- a/third-party/cmake/BuildMsgpack.cmake        2020-03-01 16:56:35.601057454 -0500
++++ b/third-party/cmake/BuildMsgpack.cmake        2020-03-01 16:56:37.784071736 -0500
+@@ -39,7 +39,7 @@
+   -DCMAKE_INSTALL_PREFIX=${DEPS_INSTALL_DIR}
+   -DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}
+   -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+-  "-DCMAKE_C_FLAGS:STRING=${CMAKE_C_COMPILER_ARG1} -fPIC"
++  "-DCMAKE_C_FLAGS:STRING=${CMAKE_C_COMPILER_ARG1} -fPIC -Wno-implicit-fallthrough"
+   -DCMAKE_GENERATOR=${CMAKE_GENERATOR})
+ 
+ set(MSGPACK_BUILD_COMMAND ${CMAKE_COMMAND} --build . --config ${CMAKE_BUILD_TYPE})
